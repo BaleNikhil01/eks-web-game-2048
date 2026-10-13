@@ -27,6 +27,7 @@ eksctl create iamserviceaccount \
   --attach-policy-arn=arn:aws:iam::<your-aws-account-id>:policy/AWSLoadBalancerControllerIAMPolicy \
   --approve
 ```
+
 | Flag | What it does |
 |---|---|
 | `--cluster` | Which EKS cluster this SA belongs to |
@@ -43,6 +44,7 @@ Add helm repo
 ```
 helm repo add eks https://aws.github.io/eks-charts
 ```
+
 What it does
 1.Downloads the index.yaml from that URL (a manifest of all available charts + versions) 
 2.Saves it locally so Helm knows what charts exist there
@@ -63,6 +65,7 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n ku
   --set region=<your-region> \
   --set vpcId=<your-vpc-id>
 ```
+
 Full flow after this command
 Ingress resource created in K8s
   → Controller pod (in kube-system) watches and detects it
@@ -74,3 +77,7 @@ Verify that the deployments are running.
 ```
 kubectl get deployment -n kube-system aws-load-balancer-controller
 ```
+
+<img width="852" height="106" alt="Screenshot From 2026-10-13 06-46-57" src="https://github.com/user-attachments/assets/746e9db3-ced4-4fa7-bad5-26a12b84519f" />
+
+<img width="860" height="171" alt="Screenshot From 2026-10-13 06-49-18" src="https://github.com/user-attachments/assets/9a871d19-7a14-4689-aec8-0d2629e4b805" />
