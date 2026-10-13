@@ -19,3 +19,8 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-bala
 
 <img width="1079" height="960" alt="Screenshot From 2026-10-13 05-43-08" src="https://github.com/user-attachments/assets/441b8fb2-08a6-45f7-b89c-dbde70d7afeb" />
 
+Live Web Game
+
+<img width="1676" height="757" alt="Screenshot From 2026-10-13 05-44-27" src="https://github.com/user-attachments/assets/ec8ef462-77cd-4081-8e67-7209dee82702" />
+
+Dashboard of EKS Cluster 
