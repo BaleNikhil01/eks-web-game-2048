@@ -45,9 +45,9 @@ Add helm repo
 helm repo add eks https://aws.github.io/eks-charts
 ```
 
-What it does
-1.Downloads the index.yaml from that URL (a manifest of all available charts + versions) 
-2.Saves it locally so Helm knows what charts exist there
+What it does\
+1.Downloads the index.yaml from that URL (a manifest of all available charts + versions) \
+2.Saves it locally so Helm knows what charts exist there\
 
 Update the repo
 
