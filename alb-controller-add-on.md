@@ -82,3 +82,6 @@ kubectl get deployment -n kube-system aws-load-balancer-controller
 
 
 <img width="860" height="171" alt="Screenshot From 2026-10-13 06-49-18" src="https://github.com/user-attachments/assets/9a871d19-7a14-4689-aec8-0d2629e4b805" />
+
+<img width="1583" height="525" alt="Screenshot From 2026-10-13 05-43-57" src="https://github.com/user-attachments/assets/cf450ccd-f108-4084-a5d3-72177f4564bf" />
+Active ALB configured by the AWS controller
