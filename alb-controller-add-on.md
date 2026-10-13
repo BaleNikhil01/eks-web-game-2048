@@ -80,4 +80,5 @@ kubectl get deployment -n kube-system aws-load-balancer-controller
 
 <img width="852" height="106" alt="Screenshot From 2026-10-13 06-46-57" src="https://github.com/user-attachments/assets/746e9db3-ced4-4fa7-bad5-26a12b84519f" />
 
+
 <img width="860" height="171" alt="Screenshot From 2026-10-13 06-49-18" src="https://github.com/user-attachments/assets/9a871d19-7a14-4689-aec8-0d2629e4b805" />
