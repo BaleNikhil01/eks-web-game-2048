@@ -10,29 +10,6 @@ The project demonstrates EKS setup, Fargate workload selection, IAM/OIDC
 permissions, Kubernetes application resources, and automated ALB
 provisioning.
 
-## Architecture and Traffic Flow
-
-``` mermaid
-flowchart TD
-    U[User's Browser] -->|HTTP/HTTPS request| ALB[Internet-facing AWS ALB]
-    ALB -->|Forwards to registered Pod IP target| P[2048 Application Pod on Fargate]
-    P -->|Response| ALB
-    ALB --> U
-
-    subgraph K[EKS / Kubernetes configuration]
-      ING[Ingress<br/>Routing rules]
-      SVC[Service<br/>Selects application Pods and port]
-      DEP[Deployment<br/>Maintains application Pods]
-      FP[Fargate Profile<br/>Selects Pods in game-2048]
-    end
-
-    CTRL[AWS Load Balancer Controller]
-    ING -. watched by .-> CTRL
-    SVC -. backend Service details .-> CTRL
-    CTRL -. creates and configures .-> ALB
-    DEP --> P
-    FP -. selects matching Pods .-> P
-```
 
 ### How Ingress, the Controller, and the ALB Work Together
 
