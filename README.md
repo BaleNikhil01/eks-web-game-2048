@@ -10,23 +10,7 @@ The project demonstrates EKS setup, Fargate workload selection, IAM/OIDC
 permissions, Kubernetes application resources, and automated ALB
 provisioning.
 
-
-### How Ingress, the Controller, and the ALB Work Together
-
-In this project, **Ingress defines the routing rules, the AWS Load Balancer Controller applies those rules to AWS, and the ALB handles incoming traffic.**
-
-```mermaid
-flowchart TD
-    A[Create Kubernetes Ingress] --> B[AWS Load Balancer Controller watches it]
-    B --> C[Controller configures the ALB and target group]
-    U[User's Browser] --> D[ALB receives the request]
-    D --> E[Registered 2048 Pod IP target]
-    E --> D
-    D --> U
-```
-
-
-## Setup Flow: What Leads to What?
+## Flow Diagram: What Leads to What?
 
 ``` mermaid
 flowchart TD
@@ -46,6 +30,23 @@ flowchart TD
 The setup has two connected outcomes: the **Deployment and Fargate
 profile get the game running**, while the **Ingress and AWS Load
 Balancer Controller make it reachable through an ALB**.
+
+
+### How Ingress, the Controller, and the ALB Work Together
+
+In this project, **Ingress defines the routing rules, the AWS Load Balancer Controller applies those rules to AWS, and the ALB handles incoming traffic.**
+
+```mermaid
+flowchart TD
+    A[Create Kubernetes Ingress] --> B[AWS Load Balancer Controller watches it]
+    B --> C[Controller configures the ALB and target group]
+    U[User's Browser] --> D[ALB receives the request]
+    D --> E[Registered 2048 Pod IP target]
+    E --> D
+    D --> U
+```
+
+
 
 ## Step-by-Step Guide
 
