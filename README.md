@@ -69,11 +69,7 @@ aws eks update-kubeconfig --name demo-cluster --region us-east-1
 ```
 
 This updates your local kubeconfig so `kubectl` knows how to connect to
-the EKS cluster. Verify the connection with:
-
-``` bash
-kubectl get namespaces
-```
+the EKS cluster. 
 
 ### 3. Configure OIDC and IAM permissions
 
