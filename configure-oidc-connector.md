@@ -1,5 +1,5 @@
 
-## To configure an IAM OIDC provider run the below command
+## To configure an IAM OIDC provider run the below command 
 
 ```
 eksctl utils associate-iam-oidc-provider --cluster $cluster_name --approve
