@@ -110,9 +110,6 @@ match the Fargate profile selector.
 Pods, the controller is running, and the Ingress receives an ALB
 hostname. Open the hostname in a browser to verify the game.
 
-If access fails, inspect Pod status/events, controller logs, IAM
-permissions, subnet discovery and security groups, Ingress events, and
-the ALB target group's registered targets.
 
 ## Why Different Tools Are Used
 
